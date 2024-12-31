@@ -9,10 +9,12 @@
 - Quản lý thông tin hiệu quả: Hỗ trợ phòng khám quản lý thông tin bệnh nhân, bác sĩ, và các dịch vụ y tế một cách hệ thống.
 - Cải thiện trải nghiệm người dùng: Tạo giao diện thân thiện, dễ sử dụng cho cả bệnh nhân và nhân viên quản lý.
 ## User
-- Khách cá nhân: Tò mò, yêu thích thử thách mới lạ.
-- Nhóm bạn bè/gia đình: Tìm kiếm hoạt động gắn kết.
-- Doanh nghiệp/tổ chức: Team-building hoặc huấn luyện kỹ năng.
-- Nhà nghiên cứu/giáo dục: Nghiên cứu hoặc tổ chức buổi học thực tế.
+1. Bệnh nhân (Patients):
+    - Những người muốn đặt lịch khám trực tuyến trước khi đến phòng khám.
+    - Mong muốn nhận thông tin rõ ràng về bác sĩ, dịch vụ, và thời gian khám.
+2. Nhân viên phòng khám (Admins):
+    - Quản lý thông tin bệnh nhân, bác sĩ, và dịch vụ.
+    - Xác nhận lịch hẹn hoặc điều chỉnh lịch khám phù hợp.
 ## Chức năng
 Chức năng cho bệnh nhân:
 1. Đăng ký lịch khám:

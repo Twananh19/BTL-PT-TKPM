@@ -14,9 +14,13 @@
 - Doanh nghiệp/tổ chức: Team-building hoặc huấn luyện kỹ năng.
 - Nhà nghiên cứu/giáo dục: Nghiên cứu hoặc tổ chức buổi học thực tế.
 ## Chức năng
-- Quản lý người dùng: Đăng ký, đăng nhập, quản lý thông tin cá nhân
-- Đặt lịch và thanh toán: Chọn ngày, gói dịch vụ, thanh toán trực tuyến.
-- Thông tin chi tiết: Gói trải nghiệm, hướng dẫn tham gia.
-- Đánh giá và tương tác: Review, bình luận, hỗ trợ trực tuyến.
+Chức năng cho bệnh nhân:
+1. Đăng ký lịch khám:
+    - Điền thông tin cá nhân (họ tên, số điện thoại, email, địa chỉ).
+    - Chọn dịch vụ, bác sĩ, ngày và giờ khám phù hợp.
+    - Nhận thông tin xác nhận lịch hẹn qua email (nếu có).
+2.Xem lịch hẹn:
+    - Kiểm tra danh sách các lịch hẹn đã đặt.
+    - Hủy hoặc thay đổi lịch hẹn (tùy điều kiện).
 ## Lộ trình triển khai
 ## Phân công 

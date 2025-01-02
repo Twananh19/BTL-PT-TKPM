@@ -16,29 +16,28 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `doctor`
+-- Table structure for table `service`
 --
 
-DROP TABLE IF EXISTS `doctor`;
+DROP TABLE IF EXISTS `service`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `doctor` (
-  `doctor_id` int NOT NULL AUTO_INCREMENT,
-  `name` varchar(100) NOT NULL,
-  `specialty` varchar(100) DEFAULT NULL,
-  `available_times` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`doctor_id`)
+CREATE TABLE `service` (
+  `service_id` int NOT NULL AUTO_INCREMENT,
+  `service_name` varchar(100) NOT NULL,
+  `price` decimal(10,2) NOT NULL,
+  PRIMARY KEY (`service_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `doctor`
+-- Dumping data for table `service`
 --
 
-LOCK TABLES `doctor` WRITE;
-/*!40000 ALTER TABLE `doctor` DISABLE KEYS */;
-INSERT INTO `doctor` VALUES (1,'Bác sĩ B','Nội khoa','8:00-12:00, 13:00-17:00');
-/*!40000 ALTER TABLE `doctor` ENABLE KEYS */;
+LOCK TABLES `service` WRITE;
+/*!40000 ALTER TABLE `service` DISABLE KEYS */;
+INSERT INTO `service` VALUES (1,'Khám tổng quát',500000.00);
+/*!40000 ALTER TABLE `service` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -50,4 +49,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2024-12-31 15:12:41
+-- Dump completed on 2025-01-02 12:06:14

@@ -24,5 +24,8 @@ Chức năng cho bệnh nhân:
 2.Xem lịch hẹn:
     - Kiểm tra danh sách các lịch hẹn đã đặt.
     - Hủy hoặc thay đổi lịch hẹn (tùy điều kiện).
+
+## Sơ đồ ERD
+![so do erd](Lanh\erd-map.png)
 ## Lộ trình triển khai
 ## Phân công 

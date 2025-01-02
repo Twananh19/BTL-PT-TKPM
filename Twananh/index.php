@@ -1,4 +1,4 @@
 <?php
 include 'db.php';
-echo "Connected successfully!";
+// echo "Connected successfully!";
 ?>

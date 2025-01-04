@@ -64,12 +64,11 @@ header>a{
   font-family:Arial, Helvetica, sans-serif;
 }
 .menu>li:hover:not(:last-child){
-  background-color: rgba(86, 144, 207);
-  color:#fff;
+  /* background-color: rgba(86, 144, 207); */
   border-radius: 20px;
 }
 .menu>li:hover:not(:last-child)>a{
-  color:#ffffff;
+  color:rgba(86, 144, 207);
   animation: 0.5s;
 }
 
@@ -321,7 +320,7 @@ header>a{
 .text3>h3{
   color:#00000096
 }
-.text3>h4{
+.text3>ul>li>h4{
   width: 70%;
   line-height:1.5;
 }
@@ -333,6 +332,9 @@ header>a{
   border-radius: 50px;
   width: fit-content;
   padding: 10px;
+}
+.b1{
+  border-radius: 5px;
 }
 .main4{
   position: relative;
@@ -436,7 +438,7 @@ header>a{
   color: rgb(244,129,32);
   margin-top: 15%;
 }
-.book>p{
+.book>a>p{
   font-size: large;
   color: #fff;
   background-color: rgb(244,129,32);
@@ -445,12 +447,14 @@ header>a{
   padding:10px;
   margin: 0px 30% 0px 30%;
 }
-
-
-
-.main{
-  height:80vh; 
+.book>a>p:hover{
+  background-color: #24bad5;
 }
+
+
+/* ========================================================================= */
+/*                           F O O T E R                                     */
+/* ========================================================================= */
 
 .button{
   font-size: 17px;
@@ -528,9 +532,6 @@ header>a{
   transform:rotate(360deg);
 }
 }
-/* ========================================================================= */
-/*                           F O O T E R                                     */
-/* ========================================================================= */
 
 footer{
   background-color: rgb(35,56,113);

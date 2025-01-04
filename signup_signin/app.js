@@ -22,6 +22,10 @@ function load(){
   }
 }
 
+function check(){
+  alert("Bạn chưa đăng nhập");
+}
+
 function unload(){
   document.getElementById('load').style.display='none';
 }

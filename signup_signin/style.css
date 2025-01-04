@@ -270,10 +270,10 @@ input {
   position: relative;
   width: 100%;
   background-color: #fff;
-  background-image: url(https://gcs.tripi.vn/public-tripi/tripi-feed/img/474545AJH/nha_tu_hoa_lo_ivivu.jpg);
+  background-image: url(../Images/test.jpg);
   background-repeat: no-repeat;
   background-size: 100%;
-  min-height: 100vh;
+  min-height: 90vh;
   overflow: hidden;
 }
 
@@ -295,6 +295,13 @@ input {
   display: grid;
   grid-template-columns: 1fr;
   z-index: 5;
+}
+.sign-in-form>h2{
+  color: rgb(0, 120, 120);
+}
+.sign-up-form>h2{
+  color: rgb(0, 120, 120);
+
 }
 
 form {
@@ -335,6 +342,7 @@ form.sign-in-form {
   grid-template-columns: 15% 85%;
   padding: 0 0.4rem;
   position: relative;
+  border: 1px solid black;
 }
 
 .input-field i {

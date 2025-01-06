@@ -100,7 +100,102 @@
             </li>
         </ul>
     </header>
-    <input type="button" class="button" for="button" value="Đăng ký" onclick="load()"> 
+    <div class="main">
+        <div class="top">
+            <div class="tron"><h3>Điền thông tin cá nhân</h3></div>
+            <div class="line"></div>
+            <div class="tron"><h3>Chi tiết lịch khám</h3></div>
+            <div class="line"></div>
+            <div class="tron"><h3>Dịch vụ đi kèm</h3></div>
+            <div class="line"></div>
+            <div class="tron"></div>
+        </div>
+        <div class="book b1">
+            <a id="back" href="#" onclick="back()" > <ion-icon name="arrow-undo-outline"></ion-icon> Quay lại</a>
+            <a id="next" href="#" onclick="next()" >Tiếp theo <ion-icon name="arrow-forward-outline"></ion-icon></a>
+            <div class="main1">
+                <div class="infor i1">
+                    <label>Họ và tên bệnh nhân:</label><br>
+                    <input type="text" id="i" > 
+                </div>
+                <div class="infor i2">
+                    <label>Ngày tháng năm sinh:</label><br>
+                    <input type="date" id="i"> 
+                </div>
+                <div class="infor i3">
+                    <label>Số điện thoại:</label><br>
+                    <input type="text" id="i"> 
+                </div>
+                <div class="infor i4">
+                    <label>Giới tính</label><br>
+                    <input type="text" list="sex" id="i">
+                    <datalist id="sex">
+                        <option value="Nam"></option>
+                        <option value="Nữ"></option>
+                        <option value="Helicopter"></option>
+                        <option value="Khác"></option>
+                    </datalist>
+                </div>
+                <div class="infor i5">
+                    <label>Tỉnh/Thành:</label><br>
+                    <input type="text" id="i"> 
+                </div>
+                <div class="infor i6">
+                    <label>Quận/Huyện:</label><br>
+                    <input type="text" id="i" > 
+                </div>
+                <div class="infor i7">
+                    <label>Phường/Xã:</label><br>
+                    <input type="text" id="i"> 
+                </div>
+                <div class="infor i8">
+                    <label>Địa chỉ email:</label><br>
+                    <input type="email" id="i" placeholder="@gmail.com"> 
+                </div>
+            </div>
+        </div>
+        <div class="book b2">
+            <a id="back" href="#" onclick="back()" > <ion-icon name="arrow-undo-outline"></ion-icon> Quay lại</a>
+            <a id="next" href="#" onclick="next()" >Tiếp theo <ion-icon name="arrow-forward-outline"></ion-icon></a>
+            <div class="main2">
+                <div class="nd">
+                    <h3>Chọn nội dung thăm khám</h3>
+                    <ul  class = "choice">
+                        <input type="text" id="find" placeholder="Tìm nhanh chủ đề thăm khám">
+                        <li onclick="choiced(1)">Can thiệp mạch máu - u gan</li>
+                        <li onclick="choiced(2)">Can thiệp tim mạch</li>
+                        <li onclick="choiced(3)">Cơ xương khớp</li>
+                        <li onclick="choiced(4)">Da liễu</li>
+                        <li onclick="choiced(5)">Đông Y</li>
+                        <li onclick="choiced(6)">Gan mật tụy</li>
+                        <li onclick="choiced(7)">Hen</li>
+                        <li onclick="choiced(8)">Hô hấp</li>
+                        <li onclick="choiced(9)">Huyết học</li>
+                        <li onclick="choiced(10)">Lão khoa</li>
+                        <li onclick="choiced(11)">Lọc máu</li>
+                        <li onclick="choiced(12)">Mắt</li>
+                        <li onclick="choiced(13)">ngoại chấn thương</li>
+                        <li onclick="choiced(14)">Ngoại lồng ngực</li>
+                    </ul>
+                </div>
+                <div class="cs">
+                    <h3>Chọn nội dung thăm khám</h3>
+                    <ul  class = "choice">
+                        <input type="text" id="find" placeholder="Tìm nhanh chủ đề thăm khám">
+                        <li onclick="choiced(1)">Bệnh viện nhân dân Gia Định</li>
+                        <li onclick="choiced(2)">Bệnh viện đa khoa Singapore</li>
+                        <li onclick="choiced(3)">Bệnh viện y học dược TP.HCM</li>
+                        <li onclick="choiced(4)">Bệnh viện Chợ Rẫy</li>
+                        <li onclick="choiced(5)">Bệnh viện qquận Bình Thạnh</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="book b3">
+            <a id="back" href="#" onclick="back()" > <ion-icon name="arrow-undo-outline"></ion-icon> Quay lại</a>
+            <a id="next" href="#" onclick="next()" >Tiếp theo <ion-icon name="arrow-forward-outline"></ion-icon></a>
+        </div>
+    </div>
     <div id="load">
         <div class="bg">
             <div class="alert">

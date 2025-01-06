@@ -28,3 +28,38 @@ function load(){
 function unload(){
     document.getElementById('load').style.display='none';
 }
+
+let trangthai=1;
+
+function updateDisplay() { 
+    document.getElementsByClassName('b1')[0].style.display='none';
+    document.getElementsByClassName('b2')[0].style.display='none';
+    document.getElementsByClassName('b3')[0].style.display='none';
+
+    if (trangthai == 1) { 
+        document.getElementsByClassName('b1')[0].style.display = 'block'; } 
+    else if (trangthai == 2) { 
+        document.getElementsByClassName('b2')[0].style.display = 'block'; } 
+    else if (trangthai == 3) { 
+        document.getElementsByClassName('b3')[0].style.display = 'block'; }
+    
+}
+function next(){
+    trangthai+=1;
+    if(trangthai>3) trangthai=3;
+    updateDisplay();
+}
+function back(){
+    trangthai-=1;
+    if(trangthai<1) trangthai=1;
+    updateDisplay();
+}
+
+function choiced(n){
+    let a = document.getElementById('find');
+    for(let i=0;i<n;i++){
+        a = a.nextElementSibling;
+    }
+    let value = a.textContent;
+    document.getElementById('find').value=value;
+}

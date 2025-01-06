@@ -65,12 +65,11 @@ header>a{
   font-family:Arial, Helvetica, sans-serif;
 }
 .menu>li:hover:not(:last-child){
-  background-color: rgba(86, 144, 207);
-  color:#fff;
+  /* background-color: rgba(86, 144, 207); */
   border-radius: 20px;
 }
 .menu>li:hover:not(:last-child)>a{
-  color:#ffffff;
+  color:rgba(86, 144, 207);
   animation: 0.5s;
 }
 
@@ -257,7 +256,6 @@ header>a{
   margin-left:15px;
   color:rgb(89, 89, 89);
 }
-
 /* ========================================================================= */
 /*                             M A I N                                       */
 /* ========================================================================= */
@@ -319,10 +317,20 @@ form {
 form.sign-up-form {
   opacity: 0;
   z-index: 1;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 30px;
+  margin: 0px 10vw ;
+  padding-bottom:20px;
+  background-color: #ffffff7e;
 }
 
 form.sign-in-form {
   z-index: 2;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 30px;
+  margin: 0px 10vw ;
+  padding-bottom:20px;
+  background-color: #ffffff9d;
 }
 
 .title {
@@ -369,7 +377,7 @@ form.sign-in-form {
 }
 
 .social-text {
-  color: #fff;
+  color: #000000;
   padding: 0.7rem 0;
   font-size: 1rem;
 }

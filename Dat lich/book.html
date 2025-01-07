@@ -102,13 +102,13 @@
     </header>
     <div class="main">
         <div class="top">
-            <div class="tron"><h3>Điền thông tin cá nhân</h3></div>
-            <div class="line"></div>
-            <div class="tron"><h3>Chi tiết lịch khám</h3></div>
-            <div class="line"></div>
-            <div class="tron"><h3>Dịch vụ đi kèm</h3></div>
-            <div class="line"></div>
-            <div class="tron"></div>
+            <div id="t1" class="tron"><h3>Điền thông tin cá nhân</h3></div>
+            <div id="h2" class="line"></div>
+            <div id="t2" class="tron"><h3>Chi tiết lịch khám</h3></div>
+            <div id="h3" class="line"></div>
+            <div id="t3" class="tron"><h3>Dịch vụ đi kèm</h3></div>
+            <div id="h4" class="line"></div>
+            <div id="t4" class="tron"></div>
         </div>
         <div class="book b1">
             <a id="back" href="#" onclick="back()" > <ion-icon name="arrow-undo-outline"></ion-icon> Quay lại</a>
@@ -159,34 +159,43 @@
             <a id="next" href="#" onclick="next()" >Tiếp theo <ion-icon name="arrow-forward-outline"></ion-icon></a>
             <div class="main2">
                 <div class="nd">
-                    <h3>Chọn nội dung thăm khám</h3>
+                    <h3>1. Chọn nội dung thăm khám</h3>
+                    <input type="text" id="findnd" placeholder="Tìm nhanh chủ đề thăm khám">
                     <ul  class = "choice">
-                        <input type="text" id="find" placeholder="Tìm nhanh chủ đề thăm khám">
-                        <li onclick="choiced(1)">Can thiệp mạch máu - u gan</li>
-                        <li onclick="choiced(2)">Can thiệp tim mạch</li>
-                        <li onclick="choiced(3)">Cơ xương khớp</li>
-                        <li onclick="choiced(4)">Da liễu</li>
-                        <li onclick="choiced(5)">Đông Y</li>
-                        <li onclick="choiced(6)">Gan mật tụy</li>
-                        <li onclick="choiced(7)">Hen</li>
-                        <li onclick="choiced(8)">Hô hấp</li>
-                        <li onclick="choiced(9)">Huyết học</li>
-                        <li onclick="choiced(10)">Lão khoa</li>
-                        <li onclick="choiced(11)">Lọc máu</li>
-                        <li onclick="choiced(12)">Mắt</li>
-                        <li onclick="choiced(13)">ngoại chấn thương</li>
-                        <li onclick="choiced(14)">Ngoại lồng ngực</li>
+                        <li id="f1" onclick="nd(1)">Can thiệp mạch máu - u gan</li>
+                        <li onclick="nd(2)">Can thiệp tim mạch</li>
+                        <li onclick="nd(3)">Cơ xương khớp</li>
+                        <li onclick="nd(4)">Da liễu</li>
+                        <li onclick="nd(5)">Đông Y</li>
+                        <li onclick="nd(6)">Gan mật tụy</li>
+                        <li onclick="nd(7)">Hen</li>
+                        <li onclick="nd(8)">Hô hấp</li>
+                        <li onclick="nd(9)">Huyết học</li>
+                        <li onclick="nd(10)">Lão khoa</li>
+                        <li onclick="nd(11)">Lọc máu</li>
+                        <li onclick="nd(12)">Mắt</li>
+                        <li onclick="nd(13)">ngoại chấn thương</li>
+                        <li onclick="nd(14)">Ngoại lồng ngực</li>
                     </ul>
                 </div>
                 <div class="cs">
-                    <h3>Chọn nội dung thăm khám</h3>
-                    <ul  class = "choice">
-                        <input type="text" id="find" placeholder="Tìm nhanh chủ đề thăm khám">
-                        <li onclick="choiced(1)">Bệnh viện nhân dân Gia Định</li>
-                        <li onclick="choiced(2)">Bệnh viện đa khoa Singapore</li>
-                        <li onclick="choiced(3)">Bệnh viện y học dược TP.HCM</li>
-                        <li onclick="choiced(4)">Bệnh viện Chợ Rẫy</li>
-                        <li onclick="choiced(5)">Bệnh viện qquận Bình Thạnh</li>
+                    <h3>2. Chọn khu vực gần nhất</h3>
+                    <input type="text" id="finddc" placeholder="Tìm nhanh địa chỉ phòng khám">
+                    <ul  class = "choice c2">
+                        <li id="f2" onclick="dc(1)">Hà Nội</li>
+                        <li onclick="dc(2)">Hồ Chí Minh</li>
+                        <li onclick="dc(3)">Đà Nẵng</li>
+                        <li onclick="dc(4)">Cần Thơ</li>
+                        <li onclick="dc(5)">Hải Phòng</li>
+                    </ul>
+                    <h3>3. Chọn cơ sở phòng khám</h3>
+                    <input type="text" id="findcs" placeholder="Tìm nhanh cơ sở phòng khám">
+                    <ul  class = "choice c3">
+                        <li id="f3" onclick="cs(1)">Bệnh viện nhân dân Gia Định</li>
+                        <li onclick="cs(2)">Bệnh viện đa khoa Singapore</li>
+                        <li onclick="cs(3)">Bệnh viện y học dược TP.HCM</li>
+                        <li onclick="cs(4)">Bệnh viện Chợ Rẫy</li>
+                        <li onclick="cs(5)">Bệnh viện quận Bình Thạnh</li>
                     </ul>
                 </div>
             </div>
@@ -194,6 +203,36 @@
         <div class="book b3">
             <a id="back" href="#" onclick="back()" > <ion-icon name="arrow-undo-outline"></ion-icon> Quay lại</a>
             <a id="next" href="#" onclick="next()" >Tiếp theo <ion-icon name="arrow-forward-outline"></ion-icon></a>
+            <div class="main3">
+                <div class="bs">
+                    <h3>4. Đặt riêng chuyên gia</h3>
+                    <input type="text" id="findbs" placeholder="Tìm tên bác sĩ chuyên gia mà bạn muốn khám riêng">
+                    <ul  class = "choice">
+                        <li id="f4" onclick="bs(1)">Bất kì chuyên gia</li>
+                        <li onclick="bs(2)">Chỉ các chuyên gia là nữ</li>
+                        <li onclick="bs(3)">Chỉ các chuyên gia là nam</li>
+                        <li onclick="bs(4)">Tiến sĩ Dương Văn Trà</li>
+                        <li onclick="bs(5)">Tiến sĩ Vũ Tuấn Anh</li>
+                        <li onclick="bs(6)">Tiến sĩ Đào Lan Anh</li>
+                        <li onclick="bs(7)">Tiến sĩ Võ Văn Quý</li>
+                        <li onclick="bs(8)">Tiến sĩ Mèo</li>
+                    </ul>
+                </div>
+                <div class="aside">
+                    <div class="doctor">
+                        <div id="imgbs">
+                            <img id="img" src="../Images/doctor.png" alt="Hình ảnh bác sĩ"></imgsrc>
+                        </div> 
+                        <div class="inforbs">
+                            <h3>Chuyên gia:</h3><h3 id="name">Bất kì</h3>
+                            <span>Giới tính:</span><span id="gender">Bất kì</span><br><br>
+                            <span>Học hàm/học vị:</span><span id="learn">Bất kì</span><br><br>
+                            <span>Lịch khám:</span><span id="dates">Bất kì ngày trong tuần</span><br><br>
+                        </div>
+                    </div>
+                    <div class="date">ủa em</div>
+                </div>
+            </div>
         </div>
     </div>
     <div id="load">

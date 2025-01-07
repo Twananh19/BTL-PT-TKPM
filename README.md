@@ -26,6 +26,20 @@ Chức năng cho bệnh nhân:
     - Hủy hoặc thay đổi lịch hẹn (tùy điều kiện).
 
 ## Sơ đồ ERD
-![so do erd](Lanh\erd-map.png)
+![so do erd](Lanh/erd.jpg)
+
+## Sơ đồ usecase admin
+![admin usecase](Lanh/admin_usecase.jpg)
+
+## Sơ đồ usecase patient
+![patient usecase](Lanh/patient_usecase.jpg)
+
+## Sơ đồ usecase guest
+![guest usecase](Lanh/guest_usecase.jpg)
+
+## Sơ đồ usecase guest
+![doctor usecase](Lanh/doctor_usecase.jpg)
+
+
 ## Lộ trình triển khai
 ## Phân công 

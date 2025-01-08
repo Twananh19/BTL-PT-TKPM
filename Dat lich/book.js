@@ -145,3 +145,4 @@ function infor(n){
     let dates = inforbs[3][n];
     return [name,gender,learn,dates];
 }
+

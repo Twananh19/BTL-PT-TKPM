@@ -266,49 +266,166 @@ header>a{
   width: 70%;
   display: flex;
   flex-direction: row;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   border-radius: 30px;
 }
 .left{
-  flex-basis: 30%;
+  flex-basis: 25%;
   text-align: center;
 }
 .left>img{
   border-radius: 50%;
-  width: 70%;
+  width: 90%;
   height: auto; /* Đặt chiều cao tự động theo tỷ lệ của hình ảnh */ 
   aspect-ratio: 1 / 1; /* Đảm bảo tỷ lệ hình vuông */ 
   object-fit: cover; /* Đảm bảo nội dung hình ảnh lấp đầy toàn bộ diện tích mà không bị méo */
 }
 .right{
-  flex-basis: 70%;
+  flex-basis: 75%;
+  padding: 0;
 }
 .infor_user{
-  border: 1px solid black;
   border-radius: 20px;
   width: 100%;  
 }
 .infor_user>h3{
-  margin-left: 20px;
+  padding: 20px 20px 10px 20px;
+  background-color: aquamarine;
+  border: 1px solid black;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  margin-bottom: 0px;
 }
 .sub_infor_user{
+  background-color: #FFF;
+  border: 1px solid black;
+  border-top: none;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-between;
+
 }
 .info-box { 
-  border: 1px solid #ccc; 
-  padding: 10px; 
-  margin: 10px 0; 
-  width: 300px;
+  margin: 20px; 
+  width: max-content;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
 } 
+.info-input{
+  height: 30px;
+  border-radius: 10px;
+  padding: 5px 10px;
+  font-size: medium;
+  border: 2px solid black;
+}
+#info-sex-dropdown{
+  height: 44px;
+  border-radius: 10px;
+  padding: 5px 10px;
+  font-size: medium;
+  border: 2px solid black;
+  width: 125px;
+}
+#info-sex-dropdown option{
+  padding: 5px 10px;
+  display: none;
+  height: 30px;
+}
+
+.box1>label{
+  width: 115px;
+  display: inline-block;
+}
+.box3>label{
+  width: 115px;
+  display: inline-block;
+}
+.box5>label{
+  width: 115px;
+  display: inline-block;
+}
+.box2>label{
+  width: 80px;
+  display: inline-block;
+}
+.box4>label{
+  width: 80px;
+  display: inline-block;
+}
+.box1>.info-input{
+  width: 200px;
+}
+.box3>.info-input{
+  width: 200px;
+}
+.box5>.info-input{
+  min-width: 200px;
+  /* box-sizing: border-box; */
+}
+.box2>.info-input{
+  width: 130px;
+}
+.box4>.info-input{
+  width: 100px;
+}
+
+
 .edit-btn { 
   margin-left: 10px; 
   cursor: pointer; 
+  display: inline-block;
+  width: 90px;
+  height: 30px;
+  color: rgb(0,165,213);
+  border: none;
+  background-color: #fff;
 } 
 #unedit{
   display: none;
+}
+.addres_edit{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* padding: 0px 20px; */
+  display: none;
+}
+.addres{
+  margin: 20px; 
+  width: max-content;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+.addres select{
+  margin: 10px 0px;
+  height: 44px;
+  border-radius: 10px;
+  padding: 5px 10px;
+  font-size: medium;
+  border: 2px solid black;
+  width: max-content;
+  min-width: 250px;
+}
+.addres input{
+  height: 30px;
+  border-radius: 10px;
+  padding: 5px 10px;
+  font-size: medium;
+  border: 2px solid black;
+  width: 226px;
+
+}
+.addres>label{
+  width: 100px;
 }
 
 /* ========================================================================= */

@@ -108,11 +108,64 @@
             <div class="infor_user">
                 <h3>Thông tin cơ bản</h3>
                 <div class="sub_infor_user">
-                    <div class="info-box"> 
-                        <input type="text" id="info-input" value="Thông tin không thể chỉnh sửa" readonly> 
-                        <button id="edit" class="edit-btn" onclick="enableEdit()">Chỉnh sửa</button>
-                        <button id="unedit" class="edit-btn" onclick="unableEdit()">Đã xong</button>
+                    <div class="info-box box1"> 
+                        <label>Tên của bạn:</label>
+                        <input type="text" class="info-input" value="Nguyễn Thái trường Tuấn Anh" readonly> 
+                        <button id="edit" class="edit-btn edit" onclick="enableEdit(0)"><b>Chỉnh sửa</b></button>
+                        <button id="unedit" class="edit-btn unedit" onclick="unableEdit(0)"><b>Đã xong</b></button>
                     </div>
+                    <div class="info-box box2">
+                        <label>Giới tính:</label> 
+                        <select class="info-input" id="info-sex-dropdown"> 
+                            <option selected value="Helicopter">Helicopter</option>
+                            <option hidden value="Nam">Nam</option> 
+                            <option hidden value="Nữ">Nữ</option> 
+                            <option hidden value="Khác">Khác</option>
+                        </select>
+                        <button id="edit" class="edit-btn edit" onclick="enableEdit(1)"><b>Chỉnh sửa</b></button>
+                        <button id="unedit" class="edit-btn unedit" onclick="unableEdit(1)"><b>Đã xong</b></button>
+                    </div>
+                    <div class="info-box box3"> 
+                        <label>Số điện thoại:</label>
+                        <input type="text" class="info-input" value="0368344953" readonly> 
+                        <button id="edit" class="edit-btn edit" onclick="enableEdit(2)"><b>Chỉnh sửa</b></button>
+                        <button id="unedit" class="edit-btn unedit" onclick="unableEdit(2)"><b>Đã xong</b></button>
+                    </div>
+                    <div class="info-box box4"> 
+                        <label>Ngày sinh:</label>
+                        <input type="text" class="info-input" value="05/08/2004" readonly> 
+                        <button id="edit" class="edit-btn edit" onclick="enableEdit(3)"><b>Chỉnh sửa</b></button>
+                        <button id="unedit" class="edit-btn unedit" onclick="unableEdit(3)"><b>Đã xong</b></button>
+                    </div>
+                    <div class="info-box box5">
+                        <label>Địa chỉ hiện tại: </label>
+                        <input type="text" id="address_user" class="info-input" value="Xã Yên Nhân - Huyện Ý Yên - Tỉnh Nam Định"> 
+                        <button id="edit" class="edit-btn edit" onclick="enableEdit(4)"><b>Chỉnh sửa</b></button>
+                        <button id="unedit" class="edit-btn unedit" onclick="unableEdit(4)"><b>Đã xong</b></button>
+                    </div>
+                    <div class="addres_edit">
+                        <div class="addres province">
+                            <label>Tỉnh/Thành:</label>
+                            <select id="province-select" name="province">
+                                <option value="">Chọn tỉnh/thành phố</option>
+                            </select>
+                        </div>
+                        <div class="addres district">
+                            <label>Quận/Huyện:</label>
+                            <select id="district-select" name="district">
+                                <option value="">Chọn quận/huyện</option>
+                            </select>
+                        </div>
+                        <div class="addres ward">
+                            <label>Phường/Xã:</label>
+                            <select id="ward-select" name="ward"> 
+                                <option value="">Chọn phường/xã</option> 
+                            </select>
+                        </div>
+                        <div class="addres detail">
+                            <label>Hẻm/số nhà:</label>
+                            <input type="text" class="info-input" placeholder="Có thể để trống" >
+                        </div>
                     </div>
                 </div>
             </div>
@@ -236,7 +289,7 @@
             }
         });
     }
-
+    
     populateProvinces();
     populateDistricts();
     populateWards();

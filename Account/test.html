@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chỉnh sửa thông tin</title>
+    <style>
+        
+        #unedit, #unedit2 {
+            display: none;
+        }
+        #info-dropdown {
+            display: none; /* Ẩn dropdown từ đầu */
+        }
+    </style>
+</head>
+<body>
+    <div class="info-box box2"> 
+        <label>Giới tính:</label>
+        <input type="text" id="info-input" value="Helicopter" readonly> 
+        <select id="info-dropdown">
+            <option value="" disabled selected hidden>Chọn giới tính</option>
+            <option value="Nam">Nam</option>
+            <option value="Nữ">Nữ</option>
+            <option value="Khác">Khác</option>
+        </select>
+        <button id="edit2" class="edit-btn edit" onclick="enableEditDropdown()">Chỉnh sửa</button>
+        <button id="unedit2" class="edit-btn unedit" onclick="unableEditDropdown()">Đã xong</button>
+    </div> 
+
+    <script>
+        function enableEditDropdown() {     
+            let inputField = document.getElementById('info-input'); 
+            let dropdown = document.getElementById('info-dropdown'); 
+            inputField.style.display = "none"; // Ẩn input
+            dropdown.style.display = "block"; // Hiển thị dropdown
+            alert('ok');
+                dropdown.focus(); 
+                document.getElementById('edit2').style.display="none";
+                document.getElementById('unedit2').style.display="block";
+            
+        }
+
+        function unableEditDropdown() { 
+            let inputField = document.getElementById('info-input'); 
+            let dropdown = document.getElementById('info-dropdown'); 
+            
+                inputField.value = dropdown.value; // Cập nhật giá trị của input với giá trị từ dropdown
+                inputField.style.display = "block"; // Hiển thị lại input
+                dropdown.style.display = "none"; // Ẩn dropdown
+                inputField.readOnly = true; 
+                inputField.style.border = "none"; // Xóa border khi không chỉnh sửa
+                document.getElementById('edit2').style.display="block";
+                document.getElementById('unedit2').style.display="none";
+            
+        }
+    </script>
+</body>
+</html>

@@ -260,43 +260,64 @@ header>a{
 /*                             M A I N                                       */
 /* ========================================================================= */
 .main{
-  margin: 20px 15vw 20px 15vw;
+  margin: 5px 15vw;
   padding: 30px;
-  height: 500px;
+  height: max-content;
   width: 70%;
   display: flex;
   flex-direction: row;
-  /* border: 1px solid black; */
   border-radius: 30px;
 }
 .left{
   flex-basis: 25%;
   text-align: center;
+  margin-right: 20px;
+  position: relative;
 }
-.left>img{
+#avatar{
   border-radius: 50%;
   width: 90%;
   height: auto; /* Đặt chiều cao tự động theo tỷ lệ của hình ảnh */ 
   aspect-ratio: 1 / 1; /* Đảm bảo tỷ lệ hình vuông */ 
   object-fit: cover; /* Đảm bảo nội dung hình ảnh lấp đầy toàn bộ diện tích mà không bị méo */
+  border: 2px solid black;
+}
+#avatar:hover{
+  cursor: pointer; 
+  border: 2px solid blue;
+
+}
+#set_change_avatar{
+  margin: 20px 0px;
+  display: none;
+}
+#change_avatar{
+  margin: 20px;
+  font-size: small;
+  padding: 5px 10px;
+  border-radius: 5px;
 }
 .right{
   flex-basis: 75%;
   padding: 0;
+  display: flex;
+  flex-direction: column;
 }
-.infor_user{
+.infor_user, .infor_account{
   border-radius: 20px;
   width: 100%;  
+  margin-bottom: 30px;
 }
-.infor_user>h3{
+.infor_user>h3, .infor_account>h3{
   padding: 20px 20px 10px 20px;
   background-color: aquamarine;
   border: 1px solid black;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  margin-bottom: 0px;
+  margin: 0px;
+  box-sizing: border-box;
 }
-.sub_infor_user{
+.sub{
   background-color: #FFF;
   border: 1px solid black;
   border-top: none;
@@ -306,7 +327,7 @@ header>a{
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-
+  box-sizing: border-box;
 }
 .info-box { 
   margin: 20px; 
@@ -341,40 +362,55 @@ header>a{
   width: 115px;
   display: inline-block;
 }
-.box3>label{
-  width: 115px;
-  display: inline-block;
-}
-.box5>label{
-  width: 115px;
-  display: inline-block;
-}
 .box2>label{
   width: 80px;
+  display: inline-block;
+}
+.box3>label{
+  width: 115px;
   display: inline-block;
 }
 .box4>label{
   width: 80px;
   display: inline-block;
 }
+.box5>label{
+  width: 115px;
+  display: inline-block;
+}
+.box6>label{
+  width: 115px;
+  display: inline-block;
+}
+.box7>label{
+  width: 115px;
+  display: inline-block;
+}
 .box1>.info-input{
   width: 200px;
-}
-.box3>.info-input{
-  width: 200px;
-}
-.box5>.info-input{
-  min-width: 200px;
-  /* box-sizing: border-box; */
 }
 .box2>.info-input{
   width: 130px;
 }
+.box3>.info-input{
+  width: 200px;
+}
 .box4>.info-input{
   width: 100px;
 }
-
-
+.box5>.info-input{
+  max-width: 600px;
+  width: max-content;
+  align-content: center;
+  min-height: 30px;
+  height: fit-content;
+}
+.box6>.info-input{
+  width: 250px;
+}
+.box7>.info-input{
+  width: 250px;
+}
 .edit-btn { 
   margin-left: 10px; 
   cursor: pointer; 
@@ -427,17 +463,31 @@ header>a{
 .addres>label{
   width: 100px;
 }
-
-/* ========================================================================= */
-/*                           F O O T E R                                     */
-/* ========================================================================= */
-
-.button{
-  font-size: 17px;
+.account{
+  display: flex;
+  flex-direction: row;
 }
-.button:hover{
-  background-color: red;
-  color:#000000;
+._info_account{
+  width: 60%;
+  border-bottom-right-radius: 0px;
+  border-right: none;
+}
+._more{
+  width: 40%;
+  border-bottom-left-radius: 0px;
+  border-left: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+._more>.info-box>button{
+  width: 160px;
+  padding: 10px 20px;
+  font-size:small;
+  border: 1.5px solid black;
+  border-radius: 10px;
+  cursor: pointer; 
 }
 #load{
   top:0;
@@ -449,16 +499,24 @@ header>a{
   z-index: 5;
 }
 .bg{
-  margin:5vh 5vw;
-  padding-top:25vh;
+  margin:20vh 20vw;
+  padding-top:15vh;
   background-color: rgba(240, 248, 255, 0.85);
-  height:65vh;
-  width:90vw;
+  height:40vh;
+  width:60vw;
   animation: fadein 1s;
   border: 3px solid gray;
   border-radius: 10px;
+  backdrop-filter: blur(5px);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
-.alert{
+.bg>img{
+  width: 10vw;
+  height: 10vw;
+}
+.change_pass{
   display: flex;
   flex-direction: column;   
   align-items: center;
@@ -483,31 +541,28 @@ header>a{
       transform: translateY(0%);
   }
 }
-.alert>h2{
-  text-align: center;
+.inputpass{
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
 }
-.alert>input{
-  font-size: larger;
+.inputpass>label{
+  width: 185px;
+  align-content: center;
+  font-weight: 600;
 }
-.loading{
-  background-color: transparent;
-  border:10px solid transparent;
-  border-left-color: red;
-  border-radius: 50%;
-  height:5vw;
-  width:5vw;
-  animation: redload 2s linear infinite;
+#unload{
+  margin: 10px 50px;
+  height: 30px;
+  width: 80px;
+  cursor: pointer;
 }
 
+/* ========================================================================= */
+/*                           F O O T E R                                     */
+/* ========================================================================= */
 
-@keyframes redload {
-0% {
-  transform:rotate(0deg);
-}
-100% {
-  transform:rotate(360deg);
-}
-}
+
 
 footer{
   background-color: rgb(35,56,113);

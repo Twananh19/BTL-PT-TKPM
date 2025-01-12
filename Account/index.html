@@ -102,15 +102,20 @@
     </header>
     <div class="main">
         <div class="left">
-            <img src="../Images/1232x500-Chi-tiết-bác-sĩ-SH-BS-CKII-LƯƠNG-TRỌNG-TƯỜNG.webp" alt="user_img">
+            <img id="avatar" src="../Images/20181211_104609_318316_Vinmec.max-1800x1800.jpg" alt="user_img" onclick="setup()">
+            <div id="set_change_avatar">
+                <input type="file" id="image_input" accept="image/*">
+                <button id="change_avatar" onclick="change_avatar()">Thiếp lập avatar mới</button>
+            </div>
+
         </div>
         <div class="right">
             <div class="infor_user">
-                <h3>Thông tin cơ bản</h3>
-                <div class="sub_infor_user">
+                <h3>Thông tin người dùng</h3>
+                <div class="sub _infor_user">
                     <div class="info-box box1"> 
                         <label>Tên của bạn:</label>
-                        <input type="text" class="info-input" value="Nguyễn Thái trường Tuấn Anh" readonly> 
+                        <input type="text" class="info-input" value="" readonly> 
                         <button id="edit" class="edit-btn edit" onclick="enableEdit(0)"><b>Chỉnh sửa</b></button>
                         <button id="unedit" class="edit-btn unedit" onclick="unableEdit(0)"><b>Đã xong</b></button>
                     </div>
@@ -127,19 +132,19 @@
                     </div>
                     <div class="info-box box3"> 
                         <label>Số điện thoại:</label>
-                        <input type="text" class="info-input" value="0368344953" readonly> 
+                        <input type="text" class="info-input" value="" readonly> 
                         <button id="edit" class="edit-btn edit" onclick="enableEdit(2)"><b>Chỉnh sửa</b></button>
                         <button id="unedit" class="edit-btn unedit" onclick="unableEdit(2)"><b>Đã xong</b></button>
                     </div>
                     <div class="info-box box4"> 
                         <label>Ngày sinh:</label>
-                        <input type="text" class="info-input" value="05/08/2004" readonly> 
+                        <input type="text" class="info-input" value="" readonly> 
                         <button id="edit" class="edit-btn edit" onclick="enableEdit(3)"><b>Chỉnh sửa</b></button>
                         <button id="unedit" class="edit-btn unedit" onclick="unableEdit(3)"><b>Đã xong</b></button>
                     </div>
                     <div class="info-box box5">
                         <label>Địa chỉ hiện tại: </label>
-                        <input type="text" id="address_user" class="info-input" value="Xã Yên Nhân - Huyện Ý Yên - Tỉnh Nam Định"> 
+                        <p id="address_user" class="info-input"></p> 
                         <button id="edit" class="edit-btn edit" onclick="enableEdit(4)"><b>Chỉnh sửa</b></button>
                         <button id="unedit" class="edit-btn unedit" onclick="unableEdit(4)"><b>Đã xong</b></button>
                     </div>
@@ -164,7 +169,33 @@
                         </div>
                         <div class="addres detail">
                             <label>Hẻm/số nhà:</label>
-                            <input type="text" class="info-input" placeholder="Có thể để trống" >
+                            <input type="text" id="detail_address" placeholder="Có thể để trống" >
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="infor_account">
+                <h3>Thông tin tài khoản</h3>
+                <div class="account">
+                    <div class="sub _info_account">
+                        <div class="info-box box6"> 
+                            <label>Tên tài khoản:</label>
+                            <input type="text" id="user_name" class="info-input" value="có cái con cặc" readonly> 
+                            <button id="edit" class="edit-btn edit" onclick="enableEdit(5)"><b>Chỉnh sửa</b></button>
+                            <button id="unedit" class="edit-btn unedit" onclick="unableEdit(5)"><b>Đã xong</b></button>
+                        </div>
+                        <div class="info-box box7"> 
+                            <label>Mật khẩu:</label>
+                            <input type="password" id="user_password" class="info-input" value="oldpass" readonly> 
+                            <button id="edit" class="edit-btn edit" onclick="load()"><b>Chỉnh sửa</b></button>
+                        </div>
+                    </div>
+                    <div class="sub _more">
+                        <div class="info-box box8"> 
+                            <button onclick="nothing()">Nhập mã giới thiệu</button>
+                        </div>
+                        <div class="info-box box9"> 
+                            <button onclick="nothing()">Quên mật khẩu?</button>
                         </div>
                     </div>
                 </div>
@@ -173,10 +204,24 @@
     </div>
     <div id="load">
         <div class="bg">
-            <div class="alert">
-                <div class="loading"></div>
-                <h2> Mạng nhà bạn quá yếu<br>Đừng lại sau!</h2>
-                <input type="button" value="Khó chịu!" onclick="unload()">
+            <img src="../Images/password-76.png" alt="">
+            <div class="change_pass">
+                <div class="inputpass">
+                    <label>Nhập lại mật khẩu cũ:</label>
+                    <input id="old_pass" type="password" class="info-input">     
+                </div>
+                <div class="inputpass">
+                    <label>Nhập mật khẩu mới:</label>
+                    <input id="new_pass1" type="password" class="info-input"> 
+                </div>
+                <div class="inputpass">
+                    <label>Nhập lại mật khẩu mới:</label>
+                    <input id="new_pass2" type="password" class="info-input"> 
+                </div>
+                <div class="inputpass">
+                    <button id="unload" onclick="unload()"><b>Hủy</b></button>
+                    <button id="unload" onclick="change()"><b>Xác nhận</b></button>
+                </div>
             </div>
         </div>
     </div>

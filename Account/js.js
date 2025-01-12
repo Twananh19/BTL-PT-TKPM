@@ -22,11 +22,47 @@ function meow(){
 
 function load(){
     document.getElementById('load').style.display='block';
+    document.getElementById('old_pass').value='';
+    document.getElementById('new_pass1').value='';
+    document.getElementById('new_pass2').value='';
 }
-
+function change(){
+    if(document.getElementById('user_password').value!=document.getElementById('old_pass').value){
+        alert('Bạn nhập sai password cũ');
+    } else if(document.getElementById('new_pass1').value!=document.getElementById('new_pass2').value){
+        alert('Bạn nhập sai password mới');
+    } else if(document.getElementById('new_pass1').value.length<8){
+        alert('Mật khẩu phải dài hơn 8 kí tự');
+    } else {
+        alert("Đổi mật khẩu thành công");
+        document.getElementById('load').style.display='none';
+        document.getElementById('user_password').value=document.getElementById('new_pass2').value;
+    }
+}
 function unload(){
     document.getElementById('load').style.display='none';
 }
+function nothing(){
+    alert('Tính năng chưa phát triển, quay lại sau!');
+}
+function setup(){
+    document.getElementById('set_change_avatar').style.display="block";
+}
+function change_avatar() { 
+    const input = document.getElementById('image_input'); 
+    const avatar = document.getElementById('avatar'); 
+    const file = input.files[0]; if (file) { 
+        const reader = new FileReader(); 
+        reader.onload = function(e) { 
+            avatar.src = e.target.result; 
+        }; 
+        reader.readAsDataURL(file); 
+    }
+    document.getElementById('set_change_avatar').style.display="none";
+}
+
+document.getElementById('image_input').addEventListener('change', handleImageUpload);  
+
 window.onload = function() {
     var statu = "signed"; // Biến trạng thái
     updateSignStatus();
@@ -49,13 +85,13 @@ function enableEdit(n) {
     }
     inputField.readOnly = false; 
     inputField.focus(); // Đặt con trỏ vào ô nhập liệu 
-    
     if(n==1){
         var options = inputField.options;
         for(var i=0;i<options.length;i++){
             options[i].style.display="block";
         }
     }
+    
 
 }
 
@@ -76,54 +112,32 @@ function unableEdit(n){
             options[i].style.display="none";
         }
     }
-    let selected=inputField.value;
-    alert("User choiced: "+selected);
 }
 function AddressEdit(){
-    let value = document.getElementById('address_user').value;
-    let parts = value.split('-');
-    let province = document.getElementById('province-select'); 
-    let district = document.getElementById('district-select'); 
-    let ward = document.getElementById('ward-select'); 
-
-    let options = province.options;
-    alert(parts[2]);
-    alert(parts[1]);
-    alert(parts[0]);
-    for (let i = 0; i < options.length; i++) { 
-        if (options[i].value === parts[2]) { 
-            options[i].selected = true; 
-            break; 
-        } 
-    }
-    options = district.options; 
-    for (let i = 0; i < options.length; i++) { 
-        if (options[i].value === parts[1]) { 
-            options[i].selected = true; 
-            break; 
-        } 
-    }
-    options = ward.options; 
-    for (let i = 0; i < options.length; i++) { 
-        if (options[i].value === parts[0]) { 
-            options[i].selected = true; 
-            break; 
-        } 
-    }
     document.getElementsByClassName('addres_edit')[0].style.display="flex";
 }
 function AddressDone(id){
     chance_width(id);
-    let province = document.getElementById('province-select').options[document.getElementById('province-select').selectedIndex].textContent;
-    let district = document.getElementById('district-select').options[document.getElementById('district-select').selectedIndex].textContent;
-    let ward = document.getElementById('ward-select').options[document.getElementById('ward-select').selectedIndex].textContent;
+    if(selected('province-select').value==0 || selected('district-select').value==0 || selected('ward-select').value==0 ){
+        alert('Bạn nhập thiếu dữ liệu');
+        return;
+    } 
+    let province = selected('province-select').textContent;
+    let district = selected('district-select').textContent;
+    let ward = selected('ward-select').textContent;
+    let detail = document.getElementById('detail_address').value;
     let address_user = ward+" - "+district+" - "+province;
-    alert(address_user);
-    document.getElementById('address_user').value= address_user;
+    if(detail!=""){
+        address_user = detail+" - "+address_user;
+    }
+    document.getElementById('address_user').textContent= address_user;
     document.getElementsByClassName('addres_edit')[0].style.display="none";
     
 }
 function chance_width(id){
-    id.style.width ="auto"; 
-    id.style.width =(id.scrollWidth+4)+"px"; 
+    id.style.width ="max-content"; 
+    id.style.width =(id.scrollWidth); 
+}
+function selected(id){
+    return document.getElementById(id).options[document.getElementById(id).selectedIndex]
 }

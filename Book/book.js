@@ -32,7 +32,15 @@ function unload(){
 /* ========================================================================= */
 /*                              M A I N                                      */
 /* ========================================================================= */
-
+let infor_user = [7];
+infor_user[0]='Dương Văn Trà';
+infor_user[1]='05/08/2004';
+infor_user[2]='0368344953';
+infor_user[3]='Helicopter';
+infor_user[4]='Tỉnh Nam Định';
+infor_user[5]='Huyện Ý Yên';
+infor_user[6]='Xã Yên Nhân';
+infor_user[7]='22010087@st.phenikaa-uni.edu.vn';
 let trangthai=1;
 let rows = 4; 
 let cols = 8; 
@@ -46,6 +54,21 @@ inforbs[1][4]='Nam';
 inforbs[2][4]='Tiến sĩ';
 inforbs[3][4]='Thứ 2/4/6/chủ nhật';
 
+function signed_button(){
+    document.getElementById('i1').value=infor_user[0];
+    document.getElementById('i2').value=infor_user[1];
+    document.getElementById('i3').value=infor_user[2];
+    document.getElementById('i4').value=infor_user[3];
+    document.getElementById('i8').value=infor_user[7];
+    // let provinve=document.getElementById('province-select');
+    // let district=document.getElementById('district-select');
+    // let ward=document.getElementById('ward-select');
+    // for(let i=0;i<provinve.options.lenght;i++){
+    //     if(infor_user[4]==provinve.option[i].textContent){
+    //         alert("ddax tim thay");
+    //     }
+    // }
+}
 
 function updateDisplay() { 
     document.getElementsByClassName('b1')[0].style.display='none';
@@ -80,6 +103,24 @@ function updateDisplay() {
     }
 }
 function next(){
+    if(trangthai==1){
+        if(
+            document.getElementById('i1').value=="" || document.getElementById('i2').value=="" || 
+            document.getElementById('i3').value=="" || document.getElementById('i4').value=="" || 
+            document.getElementById('province-select').value=="0" ||
+            document.getElementById('district-select').value=="0" || 
+            document.getElementById('ward-select').value=="0"
+        ){ 
+            alert("Bạn chưa nhập đủ các trường thông tin quan trọng");
+            return;
+        }
+    }
+    if(trangthai==2){
+        if(document.getElementById('findnd').value==""){
+            alert("Bạn chưa chọn nội dung thăm khám");
+            return;
+        }
+    }
     trangthai+=1;
     if(trangthai>3) trangthai=3;
     updateDisplay();

@@ -18,7 +18,7 @@ function load(){
   if(name.value=='' || pw.value==''){
     alert('Bạn chưa nhập đủ thông tin đăng nhập');
   } else {
-  document.getElementById('load').style.display='block';
+  window.open("../Trang chu/index.html", "_blank");
   }
 }
 
@@ -29,3 +29,20 @@ function check(){
 function unload(){
   document.getElementById('load').style.display='none';
 }
+
+document.getElementById("dataForm").addEventListener("submit", function(event){ 
+  event.preventDefault(); // Ngăn chặn gửi form mặc định 
+  var submitButton = document.getElementById("submitButton"); 
+  submitButton.innerHTML = "Đang lưu..."; 
+  var formData = new FormData(this); 
+  fetch("save_data.php", { method: "POST", body: formData }) 
+  .then(response => response.text()) 
+  .then(result => { 
+    console.log("Success:", result); 
+    submitButton.innerHTML = "Đã lưu"; 
+  }) 
+  .catch(error => { 
+    console.error("Error:", error); 
+    submitButton.innerHTML = "Lỗi! Thử lại"; 
+  }); 
+}); 

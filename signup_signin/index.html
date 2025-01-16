@@ -14,7 +14,7 @@
     <div id="fake-header"></div>
     <header>
         <script src="js.js"></script>
-        <a href="../Trang chu/index.html" target="_blank"><img id="logo" src="../Images/pnk1.jpg" alt="logo"></a>
+        <a href="../Trang chu/index.html"><img id="logo" src="../Images/pnk1.jpg" alt="logo"></a>
         <ul class="menu">
             <li><a href="#">
                 <p><b>VIETNAMESE</b></p>
@@ -35,69 +35,69 @@
                     </a></li>
                 </ul>
             </a></li>
-            <li><a href="#" target="_blank">
-                <p><b>THẮC MẮC</b></p>
-                <ion-icon name="help-circle-outline"></ion-icon></a></li>
-            <li><a href="#">
-                <p><b>ĐỐI TÁC</b></p>
-                <ion-icon name="business-outline"></ion-icon>
-            </a></li>
-            <li><a href="#" onclick="check()">
-                <p><b>ĐẶT LỊCH</b></p>
-                <ion-icon name="bandage-outline"></ion-icon>
-            </a></li>
-            <li><a href="#" onclick="check()">
-                <p><b>XEM LỊCH</b></p>
-                <ion-icon name="list-outline"></ion-icon>
-            </a></li>
-            <li><a href=".">
-                <p><b>ĐĂNG NHẬP</b></p>
-                <ion-icon name="person-circle-outline"></ion-icon>
-            </a></li>
+            <li><a href="#" >
+              <p><b>THẮC MẮC</b></p>
+              <ion-icon name="help-circle-outline"></ion-icon></a></li>
+          <li><a href="#">
+              <p><b>ĐỐI TÁC</b></p>
+              <ion-icon name="business-outline"></ion-icon>
+          </a></li>
+          <li><a href="../Book/book.html" >
+              <p><b>ĐẶT LỊCH</b></p>
+              <ion-icon name="bandage-outline"></ion-icon>
+          </a></li>
+          <li><a href="../List_booked/index.html" >
+              <p><b>XEM LỊCH</b></p>
+              <ion-icon name="list-outline"></ion-icon>
+          </a></li>
+          <li><a href="../signup_signin/index.html" >
+              <p id="sign_or_not1"><b>ĐĂNG NHẬP</b></p>
+              <ion-icon name="person-circle-outline"></ion-icon>
+          </a></li>
 
-            <li id="more">
-                <a>
-                    <ion-icon name="menu-outline"></ion-icon>
-                </a>
-                
-                <div class="side">
-                    <ul>
-                        <li><a href="#" target="_blank">
-                            <ion-icon name="home-outline"></ion-icon>
-                            <p>Trang chủ</p>
-                        </a></li>
-                        <li><a href="#" target="_blank">
-                            <ion-icon name="download-outline"></ion-icon>
-                            <p>Đăng nhập</p>
-                        </a></li>
-                        <li><a href="" onclick="check()">
-                            <ion-icon name="bandage-outline"></ion-icon>
-                            <p>Đặt Lịch</p>
-                        </a></li>
-                        <li><a href="#" onclick="check()">
-                            <ion-icon name="list-outline"></ion-icon>
-                            <p>Xem lịch</p>
-                        </a></li>
-                        <li><a href="">
-                            <ion-icon name="cellular-outline"></ion-icon>
-                            <p>Nổi tiếng</p>
-                        </a></li>
-                        <li><a href="">
-                            <ion-icon name="extension-puzzle-outline"></ion-icon>
-                            <p>Dịch vụ</p>
-                        </a></li>
-                        <li><a href="#" target="_blank">
-                            <ion-icon name="business-outline"></ion-icon>
-                            <p>Liên hệ</p>
-                        </a></li>
-                        <li><a href="#" target="_blank">
-                            <ion-icon name="help-circle-outline"></ion-icon>
-                            <p>Thắc mắc</p>
-                        </a></li>
-                        <li><a href="">
-                            <ion-icon name="globe-outline"></ion-icon>
-                            <p>Ngôn ngữ</p>
-                        </a></li>
+          <li id="more">
+              <a>
+                  <ion-icon name="menu-outline"></ion-icon>
+              </a>
+              
+              <div class="side">
+                  <ul>
+                      <li><a href="../Trang chu/index.html">
+                          <ion-icon name="home-outline"></ion-icon>
+                          <p>Trang chủ</p>
+                      </a></li>
+                      <li><a href="../signup_signin/index.html">
+                          <ion-icon name="person-circle-outline"></ion-icon>
+                          <p id="sign_or_not2">Đăng nhập</p>
+                      </a></li>
+                      <li><a href="../Book/book.html">
+                          <ion-icon name="bandage-outline"></ion-icon>
+                          <p>Đặt Lịch</p>
+                      </a></li>
+                      <li><a href="../List_booked/index.html">
+                          <ion-icon name="list-outline"></ion-icon>
+                          <p>Xem lịch</p>
+                      </a></li>
+                      <li><a href="">
+                          <ion-icon name="cellular-outline"></ion-icon>
+                          <p>Nổi tiếng</p>
+                      </a></li>
+                      <li><a href="">
+                          <ion-icon name="extension-puzzle-outline"></ion-icon>
+                          <p>Dịch vụ</p>
+                      </a></li>
+                      <li><a href="#" target="_blank">
+                          <ion-icon name="business-outline"></ion-icon>
+                          <p>Liên hệ</p>
+                      </a></li>
+                      <li><a href="#" target="_blank">
+                          <ion-icon name="help-circle-outline"></ion-icon>
+                          <p>Thắc mắc</p>
+                      </a></li>
+                      <li><a href="">
+                          <ion-icon name="globe-outline"></ion-icon>
+                          <p>Ngôn ngữ</p>
+                      </a></li>
                     </ul>
                 </div>
             </li>
@@ -116,6 +116,7 @@
               <i class="fas fa-lock"></i>
               <input type="password" id="mypw" placeholder="Mật khẩu" value=""/>
             </div>
+            
             <input type="submit" value="Login" class="btn solid" onclick="load()" />
             <p class="social-text">Hoặc đăng nhập bằng:</p>
             <div class="social-media">
@@ -137,15 +138,15 @@
             <h2 class="title">Đăng ký</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" placeholder="Tên tài khoản" />
+              <input type="text" id="user_name" placeholder="Tên tài khoản" />
             </div>
             <div class="input-field">
               <i class="fas fa-envelope"></i>
-              <input type="email" placeholder="Email" />
+              <input type="email" id="user_email" placeholder="Email" />
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Mật khẩu" />
+              <input type="password" id="user_password" placeholder="Mật khẩu" />
             </div>
             <input type="submit" class="btn" value="Sign up" />
             <p class="social-text"> Hoặc đăng nhập bằng :</p>

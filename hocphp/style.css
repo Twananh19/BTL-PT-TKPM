@@ -1,0 +1,38 @@
+body {  
+    font-family: Arial, sans-serif;  
+    background-color: #f4f4f4;  
+    margin: 0;  
+    padding: 0;  
+}  
+
+/* .container-doctors{
+    margin-top: 20px;
+}
+
+
+
+.table-doctors{
+    align-items: center;
+    margin-left: 200px;
+} */
+
+.table-doctors {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table1 {
+    width: 100%;
+    margin: 20px 0;
+    border: 1px solid #ddd;
+}
+
+.table1 th, .table1 td {
+    padding: 10px;
+    text-align: left;
+}
+
+.table1 tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+

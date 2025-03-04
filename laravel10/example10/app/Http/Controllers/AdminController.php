@@ -5,9 +5,35 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Doctor;
 use App\Models\Appointment;
+use Illuminate\Support\Facades\Auth;
+
 
 class AdminController extends Controller
 {
+
+    public function index()
+    {
+        if (Auth::check()) {
+            return redirect('/home');
+        }
+
+        return view('welcome'); // Trang mặc định nếu chưa đăng nhập
+    }
+
+    public function redirect()
+    {
+        if (Auth::check()) {
+            if (Auth::user()->usertype == 'admin') {
+                return view('admin.home'); // Kiểm tra xem có file này không
+            } else {
+                $doctor = Doctor::all();
+                return view('user.home', compact('doctor')); // Kiểm tra file này
+            }
+        }
+
+        return redirect('/'); // Nếu chưa đăng nhập, quay về trang chủ
+    }
+
     public function addview(){
 
         return view('admin.add_doctor');

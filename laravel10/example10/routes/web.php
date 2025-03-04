@@ -15,10 +15,11 @@ use App\Http\Controllers\AdminController;
 |
 */
 
-Route::get('/', [HomeController::class, 'index']);
+// Route::get('/', [HomeController::class, 'index']);
+// Route::get('/home', [HomeController::class, 'redirect']);
 
-
-Route::get('/home', [HomeController::class, 'redirect']);
+Route::get('/', [AdminController::class, 'index']);
+Route::get('/home', [AdminController::class, 'redirect']);
 
 Route::middleware([
     'auth:sanctum',

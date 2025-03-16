@@ -12,91 +12,146 @@
 </head>
 <body>
 <div class="container">
-    <div class="forms-container">
+<div class="forms-container">
         <div class="signin-signup">
-            <!-- Form Đăng Nhập -->
+
             <form method="POST" action="{{ route('login') }}" class="sign-in-form">
-                @csrf
-                <h2 class="title">Đăng nhập</h2>
-                <div class="input-field">
-                    <i class="fas fa-user"></i>
-                    <input id="email" type="email" name="email" value="{{ old('email') }}" required autofocus placeholder="Email" autocomplete="username">
-                </div>
+            @csrf
+            <h2 class="title">Đăng nhập</h2>
 
-                <div class="input-field">
-                    <i class="fas fa-lock"></i>
-                    <input id="password" type="password" name="password" required placeholder="Mật khẩu" autocomplete="current-password">
-                </div>
 
-                <div class="block mt-4">
-                    <label for="remember_me" class="flex items-center">
-                        <input id="remember_me" type="checkbox" name="remember">
-                        <span class="ms-2 text-sm text-gray-600">Ghi nhớ đăng nhập</span>
-                    </label>
-                </div>
+            <div class="input-field">
+              <!-- Column 1 -->
+              <div class="icon-wrapper">
+                <i class="fas fa-user"></i>
+                <span class="required-star">*</span>
+              </div>
+              <!-- Column 2 -->
+              <input type="email" name="email" placeholder="Email" required />
+              </div>
 
-                <input type="submit" value="Đăng nhập" class="btn solid">
 
-                @if (Route::has('password.request'))
-                    <a class="underline text-sm text-gray-600 hover:text-gray-900 mt-2" href="{{ route('password.request') }}">
-                        Quên mật khẩu?
-                    </a>
-                @endif
 
-                <p class="social-text">Hoặc đăng nhập bằng:</p>
-                <div class="social-media">
-                    <a href="#" class="social-icon"><ion-icon name="logo-google"></ion-icon></a>
-                    <a href="#" class="social-icon"><ion-icon name="logo-facebook"></ion-icon></a>
-                    <a href="#" class="social-icon"><ion-icon name="logo-twitter"></ion-icon></a>
-                    <a href="#" class="social-icon"><ion-icon name="logo-tiktok"></ion-icon></a>
-                </div>
+            <div class="input-field">
+              <!-- Column 1 -->
+              <div class="icon-wrapper">
+                <i class="fas fa-user"></i>
+                <span class="required-star">*</span>
+              </div>
+              <!-- Column 2 -->
+              <input type="password" name="password" placeholder="Mật khẩu" required />
+              </div>
+
+
+
+
+            <input type="submit" value="Login" class="btn solid" />
+            <p class="social-text">Hoặc đăng nhập bằng:</p>
+            <div class="social-media">
+              <a href="#" class="social-icon">
+                <ion-icon name="logo-google"></ion-icon>
+              </a>
+              <a href="#" class="social-icon">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+              <a href="#" class="social-icon">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+              <a href="#" class="social-icon">
+                <ion-icon name="logo-tiktok"></ion-icon>
+              </a>
+            </div>
             </form>
 
-            <!-- Form Đăng Ký -->
+
             <form method="POST" action="{{ route('register') }}" class="sign-up-form">
-                @csrf
-                <h2 class="title">Đăng ký</h2>
+            @csrf
+            <h2 class="title">Đăng ký</h2>
+            <div class="input-field">
+              <!-- Column 1 -->
+              <div class="icon-wrapper">
+                <i class="fas fa-user"></i>
+                <span class="required-star">*</span>
+              </div>
+              <!-- Column 2 -->
+              <input type="text" placeholder="Tên tài khoản" required />
+            </div>
 
-                <div class="input-field">
-                    <i class="fas fa-user"></i>
-                    <input type="text" id="name" name="name" value="{{ old('name') }}" required placeholder="Tên tài khoản" autofocus autocomplete="name">
-                </div>
 
-                <div class="input-field">
-                    <i class="fas fa-envelope"></i>
-                    <input type="email" id="email" name="email" value="{{ old('email') }}" required placeholder="Email" autocomplete="username">
-                </div>
 
-                <div class="input-field">
-                    <i class="fas fa-envelope"></i>
-                    <input type="text" id="phone" name="phone" value="{{ __('phone') }}" required placeholder="Phone" autocomplete="username">
-                </div>
+            <div class="input-field">
+              <!-- Column 1 -->
+              <div class="icon-wrapper">
+                <i class="fas fa-user"></i>
+                <span class="required-star">*</span>
+              </div>
+              <!-- Column 2 -->
+              <input type="email" name="email" placeholder="Email" required />
+            </div>
 
-                <div class="input-field">
-                    <i class="fas fa-envelope"></i>
-                    <input type="text" id="address" name="address" value="{{ __('address') }}" required placeholder="Address" autocomplete="username">
-                </div>
 
-                <div class="input-field">
-                    <i class="fas fa-lock"></i>
-                    <input type="password" id="password" name="password" value="{{ __('Password') }}" required placeholder="Mật khẩu" autocomplete="new-password">
-                </div>
 
-                <div class="input-field">
-                    <i class="fas fa-lock"></i>
-                    <input type="password" id="password_confirmation" value="{{ __('Confirm Password') }}" name="password_confirmation" required placeholder="Xác Nhận Mật khẩu" autocomplete="new-password">
-                </div>
+            <div class="input-field">
+              <!-- Column 1 -->
+              <div class="icon-wrapper">
+                <i class="fas fa-user"></i>
+                <span class="required-star">*</span>
+              </div>
+              <!-- Column 2 -->
+              <select name="usertype" required style="border:none; width:100%; outline:none;">
+                <option value="">-- Chọn loại tài khoản --</option>
+                <option value="Admin">Admin</option>
+                <option value="User">User</option>
+              </select>
+            </div>
 
-                <input type="submit" class="btn" value="Đăng ký" />
 
-                <p class="social-text">Hoặc đăng ký bằng:</p>
-                <div class="social-media">
-                    <a href="#" class="social-icon"><ion-icon name="logo-google"></ion-icon></a>
-                    <a href="#" class="social-icon"><ion-icon name="logo-facebook"></ion-icon></a>
-                    <a href="#" class="social-icon"><ion-icon name="logo-twitter"></ion-icon></a>
-                    <a href="#" class="social-icon"><ion-icon name="logo-tiktok"></ion-icon></a>
-                </div>
+
+            <div class="input-field">
+              <!-- Column 1 -->
+              <div class="icon-wrapper">
+                <i class="fas fa-user"></i>
+                <span class="required-star">*</span>
+              </div>
+              <!-- Column 2 -->
+              <input type="password" name="password" placeholder="Mật khẩu" required />
+            </div>
+
+
+
+            <div class="input-field">
+              <!-- Column 1 -->
+              <div class="icon-wrapper">
+                <i class="fas fa-user"></i>
+                <span class="required-star">*</span>
+              </div>
+              <!-- Column 2 -->
+              <input type="password" name="password_confirmation" placeholder="Xác nhận mật khẩu" required />
+            </div>
+
+
+
+
+            
+
+            <input type="submit" class="btn" value="Sign up" />
+            <p class="social-text"> Hoặc đăng nhập bằng :</p>
+            <div class="social-media">
+              <a href="#" class="social-icon">
+                <ion-icon name="logo-google"></ion-icon>
+              </a>
+              <a href="#" class="social-icon">
+                <ion-icon name="logo-facebook"></ion-icon>
+              </a>
+              <a href="#" class="social-icon">
+                <ion-icon name="logo-twitter"></ion-icon>
+              </a>
+              <a href="#" class="social-icon">
+                <ion-icon name="logo-tiktok"></ion-icon>
+              </a>
+            </div>
             </form>
+
         </div>
     </div>
 

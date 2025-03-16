@@ -353,6 +353,25 @@ form.sign-in-form {
   border: 1px solid black;
 }
 
+.icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* icon + dấu sao căn giữa dọc & ngang */
+}
+
+.icon-wrapper i {
+  color: #acacac;
+  font-size: 1.1rem;
+  transition: 0.5s;
+  margin-right: 3px; /* Khoảng cách giữa icon và dấu sao */
+}
+
+.required-star {
+  color: red;
+  font-size: 1.1rem;
+}
+
+
 .input-field i {
   text-align: center;
   line-height: 55px;
